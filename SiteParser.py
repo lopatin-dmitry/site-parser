@@ -1,8 +1,12 @@
-from bs4 import BeautifulSoup as bs
 import textwrap
+
+from bs4 import BeautifulSoup as bs
 
 
 class SiteParser:
+    """
+    Поиск по странице сайта содержимого статьи.
+    """
     _max_text_length = 80
 
     def __init__(self, html):
@@ -103,6 +107,14 @@ class SiteParser:
         return wrapped_text
 
     def parse(self):
+        """
+        Метод возвращает заголовк статьи и её содержимое в виде строки.
+
+        Все строки больше 80 символов переносятся по словам, абзацы и заголовки отделяются пустой строкой, ссылки
+        заменяются текстом в квадратных скобках.
+        :return:
+            Заголовк статьи и её содержимое в виде строки.
+        """
         parser = bs(self._html, "html.parser")
         result = ''
 
