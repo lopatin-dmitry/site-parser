@@ -1,0 +1,52 @@
+www_ridus_ru:
+  article:
+    tag: div
+    class: article
+  title:
+    tag: h1
+    class: article__title
+  content:
+    tag: div
+    itemprop: articleBody
+    divs:
+      - p
+      - h2
+
+lenta_ru:
+  article:
+    tag: div
+    class: topic-body
+  title:
+    tag: span
+    class: topic-body__title
+  content:
+    tag: div
+    class: topic-body__content
+    divs:
+      - p
+
+cheremuha_com:
+  article:
+    tag: article
+    class: article
+  title:
+    tag: h1
+    itemprop: headline
+  content:
+    tag: div
+    itemprop: articleBody
+    divs:
+      - p
+
+www_gazeta_ru:
+  article:
+    tag: article
+    class: b_article
+  title:
+    tag: h1
+    class: headline
+  content:
+    tag: div
+    class: b_article-text
+    divs:
+      - p
